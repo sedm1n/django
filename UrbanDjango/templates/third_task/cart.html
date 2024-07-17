@@ -1,0 +1,16 @@
+{%extends "third_task/base.html"%}
+{% block title %} Карзина {% endblock %}
+
+{%block content%}
+<h1> Корзина </h1>
+ 
+ <h3> Оформление заказа</h3>
+ <ul>
+ 
+ {%for key, value in cart_goods.items %}
+     <li>{{key}}: цена - {{value}}</li> 
+ {%endfor%}
+</ul>
+<form action="/task3"><button>Оформить заказ</button></form>
+<form action="/task3"><button>Вернуться обратно</button></form>
+{%endblock content%}
