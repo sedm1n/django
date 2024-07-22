@@ -1,0 +1,16 @@
+{%extends "fourth_task/menu.html"%}
+{% block title %} Магазин{% endblock %}
+{%block pagename%}
+{{pagename}}
+{%endblock pagename%}
+{% block content %}
+
+ <ul>
+ 
+ {%for good in goods.games %}
+     <li>{{good}}: <button>купить</button></li> 
+ {%endfor%}
+</ul>
+<form action="/task4"><button>Вернуться обратно</button></form>
+
+{% endblock content%}
